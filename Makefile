@@ -1,6 +1,6 @@
-CXX = g++
+CC = g++
 
-CXXFLAGS = -std=c++11
+FLAGS = -std=c++11
 
 EXECUTABLE = TearminalGame
 
@@ -11,10 +11,10 @@ OBJS = $(SRCS:.cpp=.o)
 all: $(EXECUTABLE)
 
 $(EXECUTABLE): $(OBJS)
-	$(CXX) $(CXXFLAGS) -o $@ $(OBJS)
+	$(CC) $(FLAGS) -o $@ $(OBJS)
 
 %.o: %.cpp
-	$(CXX) $(CXXFLAGS) -c $< -o $@
+	$(CC) $(FLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJS) $(EXECUTABLE)
